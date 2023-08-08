@@ -111,6 +111,14 @@ function cnoio_stormspotter-client() {
     docker run --hostname cnoio_stormspotter-client -v /shared:/shared -ti cnoio/stormspotter-client
 }
 
+function cnoio_john() {
+    docker run --hostname cnoio_john -v /shared:/shared -ti cnoio/john $@
+}
+
+function cnoio_zip2john() {
+    docker run --hostname cnoio_zip2john -v /shared:/shared -ti cnoio/zip2john $@
+}
+
 function cnoio_stormspotter() {
     if [ -f /usr/local/bin/docker-compose ]
     then
