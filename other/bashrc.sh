@@ -103,6 +103,10 @@ function cnoio_mailsniper() {
     docker run --hostname cnoio_mailsniper -v /shared:/shared -v /root/.aws:/root/.aws -ti cnoio/mailsniper $@
 }
 
+function cnoio_msolspray() {
+    docker run --hostname cnoio_msolspray -v /shared:/shared -v /root/.aws:/root/.aws -ti cnoio/msolspray $@
+}
+
 function cnoio_roadrecon() {
     docker run --hostname cnoio_roadrecon -v /shared:/shared -p 5000:5000 -v /root/.aws:/root/.aws -ti cnoio/roadrecon $@
 }
